@@ -3,7 +3,7 @@ import basics.Ch4.*;
 
 public class Test {
     public static void main(String[] args){
-        Problem9 p = new Problem9(5);
+        Problem10 p = new Problem10();
         p.run();
 
     }
