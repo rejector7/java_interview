@@ -8,6 +8,10 @@ class Connection{
     static Connection getConnection(){
         return new Connection();
     }
+
+    public void run(){
+        println("Connection Run");
+    }
 }
 
 public class ConnectionManager {
@@ -16,4 +20,6 @@ public class ConnectionManager {
         return cons[0];
     }
 }
+
+
 
