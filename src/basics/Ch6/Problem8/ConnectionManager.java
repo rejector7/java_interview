@@ -12,6 +12,10 @@ class Connection{
     public void run(){
         println("Connection Run");
     }
+
+    public static void main(){
+        println("Connection Main");
+    }
 }
 
 public class ConnectionManager {
