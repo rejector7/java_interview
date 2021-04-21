@@ -1,3 +1,4 @@
+// Problem 1 & 3
 package basics.Ch10;
 import static util.Print.*;
 
@@ -7,8 +8,11 @@ class Outer{
         info = "Outer Construction";
     }
     class Inner{
-        void run(){
+        public void run(){
             println("Inner run");
+        }
+         public String toString(){
+            return info;
         }
     }
     public Inner getInner(){
@@ -22,5 +26,6 @@ public class Problem1 {
         Outer o = new Outer();
         Outer.Inner oi = o.getInner();
         oi.run();
+        println(oi);
     }
 }
