@@ -11,7 +11,7 @@ class Outer{
         public void run(){
             println("Inner run");
         }
-         public String toString(){
+        public String toString(){
             return info;
         }
     }
