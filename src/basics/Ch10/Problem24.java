@@ -2,9 +2,20 @@ package basics.Ch10;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.Iterable;
+import java.util.Iterator;
 import static util.Print.*;
 
 public class Problem24 {
+    public static void main(String[] args){
+        long delayTime = 1000;
+        GreenhouseController gc = new GreenhouseController();
+        GreenhouseController.LightOn e1 = gc.new LightOn(delayTime);
+        GreenhouseController.LightOff e2 = gc.new LightOff(delayTime);
+        gc.addEvent(e1);
+        gc.addEvent(e2);
+        gc.run();
+    }
 }
 
 abstract class Event{
@@ -25,24 +36,27 @@ abstract class Event{
 }
 
 class Controller{
-    private List<Event> eventList = new ArrayList<>();
+    private ArrayList<Event> eventList = new ArrayList<>();
     public void addEvent(Event e){
         eventList.add(e);
     }
     public void run(){
+
         while(eventList.size() > 0){
-            for(Event e: eventList){
+            Iterator<Event> it = eventList.iterator();
+            while (it.hasNext()){
+                Event e = it.next();
                 println(e);
                 e.start();
-                eventList.remove(e);
+                it.remove();
             }
         }
     }
 }
 
 class GreenhouseController extends Controller{
-    private boolean light = false;
     private boolean water = false;
+    private boolean light = false;
 
     public class LightOn extends Event{
         public LightOn(long delayTime){
@@ -53,6 +67,18 @@ class GreenhouseController extends Controller{
         }
         public String toString(){
             return "Light is on.";
+        }
+    }
+
+    public class LightOff extends Event{
+        public LightOff(long delayTime){
+            super(delayTime);
+        }
+        public void action(){
+            light = false;
+        }
+        public String toString(){
+            return "light is off.";
         }
     }
 }
