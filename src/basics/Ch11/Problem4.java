@@ -30,6 +30,15 @@ public class Problem4 {
         Problem4.DataGenerator pd = new DataGenerator();
         println(fillData(new ArrayList<>(), 5, pd));
         println(fillData(new HashSet<>(), 6, pd));
+        Test t = new Test();
+    }
+}
+
+class Test{
+    Problem4.DataGenerator pd = new Problem4.DataGenerator();
+    {
+        println(Problem4.fillData(new ArrayList<>(), 5, pd));
+        println(Problem4.fillData(new HashSet<>(), 6, pd));
     }
 }
 
