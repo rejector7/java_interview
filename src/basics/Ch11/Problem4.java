@@ -1,5 +1,6 @@
 package basics.Ch11;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -30,6 +31,7 @@ public class Problem4 {
         Problem4.DataGenerator pd = new DataGenerator();
         println(fillData(new ArrayList<>(), 5, pd));
         println(fillData(new HashSet<>(), 6, pd));
+        println(fillData(new ArrayList<>(Arrays.asList("a1", "a2")), 3, pd));
         Test t = new Test();
     }
 }
