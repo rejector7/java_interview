@@ -12,7 +12,7 @@ public class P41 {
     class Solution {
         public int firstMissingPositive(int[] nums) {
             int length = nums.length;
-            int temp;
+            int temp; // cur num
             int temp2;
             int i = 0;
             while(i<length){
@@ -20,7 +20,7 @@ public class P41 {
                 while(temp<=length && temp >=1){
                     temp2 = nums[temp-1];
                     nums[temp-1] = temp;
-                    if(temp == temp2){
+                    if(temp == temp2){ //如果要置换的元素已经相等，则停止置换。
                         break;
                     }
                     temp = temp2;
