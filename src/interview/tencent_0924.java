@@ -16,9 +16,9 @@ public class tencent_0924 {
     }
 
 
-    public static void main(String[] args){
-        Timer timer = new Timer();
-        timer.schedule();
-    }
+//    public static void main(String[] args){
+//        Timer timer = new Timer();
+//        timer.schedule();
+//    }
 }
 
