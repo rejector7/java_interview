@@ -1,4 +1,4 @@
-package javaee.multithreading;
+package javase.multithreading;
 
 public class HelloInterrupt {
     public static void main(String[] args) throws InterruptedException {

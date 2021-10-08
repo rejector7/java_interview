@@ -1,4 +1,4 @@
-package javaee.multithreading;
+package javase.multithreading;
 
 public class HelloRunnable implements Runnable{
 
