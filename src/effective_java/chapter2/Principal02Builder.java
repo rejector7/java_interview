@@ -42,7 +42,7 @@ public class Principal02Builder {
     }
 
     public static void main(String[] args) {
-        Principal02Builder pb = new Builder("boy").age(10).name("ruanjinteng").build();
+        Principal02Builder pb = new Principal02Builder.Builder("boy").age(10).name("ruanjinteng").build();
         pb.Hello();
     }
 }
