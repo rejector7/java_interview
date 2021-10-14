@@ -9,6 +9,10 @@ public class Principal11Hashcode {
         this.phoneNumber = phoneNumber;
     }
 
+//    public static Principal11Hashcode getInstance(int phoneNumber){
+//        return new Principal11Hashcode(phoneNumber);
+//    }
+
     @Override
     public boolean equals(Object obj) {
         if(obj == this) return true;
@@ -20,6 +24,11 @@ public class Principal11Hashcode {
     @Override
     public int hashCode() {
         return Objects.hash(phoneNumber);
+    }
+
+    @Override
+    public String toString(){
+        return String.valueOf(this.phoneNumber);
     }
 
     public static void main(String[] args) {
