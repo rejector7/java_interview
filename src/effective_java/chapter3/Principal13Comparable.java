@@ -28,6 +28,13 @@ public class Principal13Comparable implements Comparable<Principal13Comparable>{
         System.out.println(Arrays.toString(arrayA));
 
         // anonymous class -> lambda expression -> comparingInt
+        Comparator<Principal13Comparable> comparator1 = new Comparator<Principal13Comparable>() {
+            @Override
+            public int compare(Principal13Comparable o1, Principal13Comparable o2) {
+                return Integer.compare(o1.phoneNumber, o2.phoneNumber);
+            }
+        };
+        Comparator<Principal13Comparable> comparator2 = (o1, o2) -> Integer.compare(o1.phoneNumber, o2.phoneNumber);
         Comparator<Principal13Comparable> comparator = Comparator.comparingInt(o -> o.phoneNumber);
 
         System.out.println(comparator.compare(arrayA[0], arrayA[1]));
