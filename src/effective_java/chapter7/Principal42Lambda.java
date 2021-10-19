@@ -3,9 +3,6 @@ package effective_java.chapter7;
 import java.util.*;
 
 public class Principal42Lambda {
-
-
-
     public static void main(String[] args) {
         Comparator<String> comparator = new Comparator<String>() {
             @Override
@@ -18,5 +15,12 @@ public class Principal42Lambda {
         words.add("234");
         Collections.sort(words, comparator);
         System.out.println(words);
+
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        hashMap.put(1, 2);
+        hashMap.put(2, 4);
+//        hashMap.merge(key, 1, (count, incr) -> count + incr);
+        hashMap.merge(2, 1, Integer::sum);
+        System.out.println(hashMap);
     }
 }
