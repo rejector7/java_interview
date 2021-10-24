@@ -8,6 +8,14 @@ public class Principal44FunctionInterface{
         FunctionInterfaceTest functionInterfaceTest = info -> System.out.println(info);
 //        FunctionInterfaceTest functionInterfaceTest = System.out :: println;
         functionInterfaceTest.getInfo("Hello Functional Interface");
+        Consumer<String> consumer = new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                System.out.println(s);
+            }
+        };
+        Consumer<String> c = System.out::println;
+        c.accept("hello");
         BiFunction<String, Integer, Double> biFunction = new BiFunction<String, Integer, Double>() {
             @Override
             public Double apply(String s, Integer integer) {
