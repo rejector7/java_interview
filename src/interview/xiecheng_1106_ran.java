@@ -3,7 +3,7 @@ package interview;
 import java.sql.Array;
 import java.util.*;
 
-public class renshou_1106_ran {
+public class xiecheng_1106_ran {
 }
 
 
